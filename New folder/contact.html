@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Toe Titan | Contact</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white">
+<div id="preloader"><div class="spinner"></div></div>
+
+<header>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Main Navigation">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Toe Titan</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav mx-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="shop.html?cat=men">Men</a></li>
+        <li class="nav-item"><a class="nav-link" href="shop.html?cat=women">Women</a></li>
+      </ul>
+      <div class="d-flex align-items-center justify-content-lg-end mt-3 mt-lg-0">
+        <form class="search-box me-3 position-relative" role="search" aria-label="Site Search">
+          <label for="searchInputContact" class="visually-hidden">Search</label>
+          <input type="text" id="searchInputContact" class="form-control rounded-pill pe-4" placeholder="Search..." aria-label="Search products" style="margin-bottom: 0; padding-top: 8px; padding-bottom: 8px;">
+          <span class="position-absolute end-0 top-50 translate-middle-y me-2" style="cursor: pointer;" aria-hidden="true" role="button" aria-label="Submit Search">🔍</span>
+        </form>
+        <a class="nav-link btn-cart me-2 d-flex align-items-center" href="cart.html">
+          Cart <span class="cart-badge ms-2" style="display: none;">0</span>
+        </a>
+        <a class="nav-link px-2" href="login.html" style="font-size: 1.2rem; text-decoration: none;" title="Login / Register" aria-label="User Account">👤</a>
+        <button class="btn btn-link nav-link px-2 theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode" style="font-size: 1.2rem; margin:0;" title="Toggle Dark Mode">🌓</button>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main role="main">
+<div class="container my-5 py-5 mt-0">
+  <div class="row g-5">
+    <div class="col-lg-5">
+      <h1 class="display-huge mb-4 text-dark" style="line-height:1;">GET IN<br>TOUCH.</h1>
+      <p class="fs-4 mb-5 text-muted" style="text-transform:none; letter-spacing:0; font-weight:400; font-family:'Inter',sans-serif;">We're here to help and answer any question you might have. We look forward to hearing from you.</p>
+      
+      <div class="mb-5">
+        <h5 class="fw-bold text-uppercase mb-2 text-dark">Customer Service</h5>
+        <p class="text-muted fs-5 mb-1" style="text-transform:none; letter-spacing:0;">1-800-TOE TITAN</p>
+        <p class="text-muted fs-5" style="text-transform:none; letter-spacing:0;"><a href="mailto:care@toetitan.com" class="text-dark border-bottom border-dark text-decoration-none">care@toetitan.com</a></p>
+      </div>
+      
+      <div>
+        <h5 class="fw-bold text-uppercase mb-2 text-dark">Headquarters</h5>
+        <p class="text-muted fs-5 mb-1" style="text-transform:none; letter-spacing:0;">Innovation Campus Space<br>Metropolis, NY 10001</p>
+      </div>
+    </div>
+    
+    <div class="col-lg-7">
+      <form class="p-lg-5" onsubmit="window.handleContact(event)">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <input type="text" class="form-control form-control-clean fs-4 py-3" placeholder="First Name">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control form-control-clean fs-4 py-3" placeholder="Last Name">
+          </div>
+          <div class="col-12">
+            <input type="email" class="form-control form-control-clean fs-4 py-3" placeholder="Email Address">
+          </div>
+          <div class="col-12 pt-3">
+            <textarea class="form-control form-control-clean fs-4 py-3" rows="4" placeholder="What's on your mind?"></textarea>
+          </div>
+          <div class="col-12 mt-5 text-end">
+            <button class="btn btn-dark py-3 px-5 rounded-0 fs-5">SEND MESSAGE</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer role="contentinfo">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 mb-4 mb-md-0">
+        <h4 style="font-weight: 900; letter-spacing: -1px; text-transform: uppercase; margin-bottom: 15px;">TOE TITAN</h4>
+        <p style="opacity: 0.6; font-size: 0.9rem; max-width: 300px;">The ultimate destination for premium footwear. Step into greatness with our exclusive collections.</p>
+      </div>
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h6 class="text-uppercase fw-bold mb-3" style="font-size: 0.9rem;">Company</h6>
+        <div class="d-flex flex-column gap-2" style="font-size: 0.9rem;">
+          <a href="about.html" class="text-light text-decoration-none" style="opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Our Story</a>
+          <a href="contact.html" class="text-light text-decoration-none" style="opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Contact Us</a>
+          <a href="login.html" class="text-light text-decoration-none" style="opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Member Login</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h6 class="text-uppercase fw-bold mb-3" style="font-size: 0.9rem;">Shop All Gear</h6>
+        <div class="d-flex flex-column gap-2" style="font-size: 0.9rem;">
+          <a href="shop.html?cat=men" class="text-light text-decoration-none" style="opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Men's Core Collection</a>
+          <a href="shop.html?cat=women" class="text-light text-decoration-none" style="opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Women's Core Collection</a>
+          <a href="cart.html" class="text-light text-decoration-none" style="opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Your Cart</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5 pt-4 text-center" style="border-top: 1px solid rgba(255,255,255,0.1);">
+      <p style="opacity: 0.5; font-size: 0.8rem;">© 2025 Toe Titan. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>

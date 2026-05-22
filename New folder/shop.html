@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Toe Titan | Shop</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="preloader"><div class="spinner"></div></div>
+
+<header>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Main Navigation">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Toe Titan</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav mx-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="shop.html?cat=men">Men</a></li>
+        <li class="nav-item"><a class="nav-link" href="shop.html?cat=women">Women</a></li>
+      </ul>
+      <div class="d-flex align-items-center justify-content-lg-end mt-3 mt-lg-0">
+        <form class="search-box me-3 position-relative" role="search" aria-label="Site Search">
+          <label for="searchInputShop" class="visually-hidden">Search</label>
+          <input type="text" id="searchInputShop" class="form-control rounded-pill pe-4" placeholder="Search..." aria-label="Search products" style="margin-bottom: 0; padding-top: 8px; padding-bottom: 8px;">
+          <span class="position-absolute end-0 top-50 translate-middle-y me-2" style="cursor: pointer;" aria-hidden="true" role="button" aria-label="Submit Search">🔍</span>
+        </form>
+        <a class="nav-link btn-cart me-2 d-flex align-items-center" href="cart.html">
+          Cart <span class="cart-badge ms-2" style="display: none;">0</span>
+        </a>
+        <a class="nav-link px-2" href="login.html" style="font-size: 1.2rem; text-decoration: none;" title="Login / Register" aria-label="User Account">👤</a>
+        <button class="btn btn-link nav-link px-2 theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode" style="font-size: 1.2rem; margin:0;" title="Toggle Dark Mode">🌓</button>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main role="main">
+<header class="page-header text-center">
+  <div class="container">
+    <h1 class="display-huge" tabindex="0">ALL GEAR</h1>
+    <p class="lead mt-3" style="font-size: 1.2rem;">Refine your search to find the perfect fit.</p>
+  </div>
+</header>
+
+<div class="container my-5">
+  <div class="row">
+    <!-- Sidebar Filters -->
+    <aside class="col-lg-3 col-md-4 mb-4" aria-label="Filters">
+      <form class="filter-sidebar p-4 bg-light border">
+        <h5 class="fw-bold mb-3 text-uppercase">Filters</h5>
+        
+        <div class="mb-4">
+          <h6 class="fw-bold text-uppercase mb-2">Price</h6>
+          <input type="range" class="form-range" min="0" max="20000" id="priceRange" value="20000">
+          <div class="d-flex justify-content-between text-muted small">
+            <span>₹0</span><span>₹20,000</span>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <h6 class="fw-bold text-uppercase mb-2">Size (US)</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-outline-dark btn-sm">7</button>
+            <button class="btn btn-outline-dark btn-sm">8</button>
+            <button class="btn btn-outline-dark btn-sm">9</button>
+            <button class="btn btn-outline-dark btn-sm">10</button>
+            <button class="btn btn-outline-dark btn-sm">11</button>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <h6 class="fw-bold text-uppercase mb-2">Brand</h6>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="brandNike" checked>
+            <label class="form-check-label" for="brandNike">Nike</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="brandAdidas" checked>
+            <label class="form-check-label" for="brandAdidas">Adidas</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="brandPuma" checked>
+            <label class="form-check-label" for="brandPuma">Puma</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="brandVans" checked>
+            <label class="form-check-label" for="brandVans">Vans</label>
+          </div>
+        </div>
+        
+        <button type="button" class="btn btn-dark w-100" onclick="window.applyFilters()">Apply Filters</button>
+      </form>
+    </aside>
+
+    <!-- Product Grid -->
+    <section class="col-lg-9 col-md-8" aria-label="Products">
+      <div class="row g-4 mb-5 justify-content-start" id="productGrid">
+        <!-- Item 1 -->
+        <div class="col-lg-4 col-sm-6 product-card-container">
+          <article class="card h-100">
+            <div class="img-wrapper">
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop" alt="Shoe">
+            </div>
+            <div class="card-body">
+              <h6 class="mb-1">Nike Air Force 1</h6>
+              <p class="text-muted mb-0">Unisex Shoe</p>
+              <div class="price">₹7,499</div>
+              <button class="btn btn-add">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+        <!-- Item 2 -->
+        <div class="col-lg-4 col-sm-6">
+          <article class="card h-100">
+            <div class="img-wrapper">
+              <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?q=80&w=600&auto=format&fit=crop" alt="Shoe">
+            </div>
+            <div class="card-body">
+              <h6 class="mb-1">Puma RS-X</h6>
+              <p class="text-muted mb-0">Men's Running</p>
+              <div class="price">₹5,999</div>
+              <button class="btn btn-add">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+        <!-- Item 3 -->
+        <div class="col-lg-4 col-sm-6">
+          <article class="card h-100">
+            <div class="img-wrapper">
+              <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=600&auto=format&fit=crop" alt="Shoe">
+            </div>
+            <div class="card-body">
+              <h6 class="mb-1">Vans Checkered</h6>
+              <p class="text-muted mb-0">Skateboarding</p>
+              <div class="price">₹3,999</div>
+              <button class="btn btn-add">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+        <!-- Item 4 -->
+        <div class="col-lg-4 col-sm-6">
+          <article class="card h-100">
+            <div class="img-wrapper">
+              <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?q=80&w=600&auto=format&fit=crop" alt="Shoe">
+            </div>
+            <div class="card-body">
+              <h6 class="mb-1">Adidas Retro</h6>
+              <p class="text-muted mb-0">Men's Originals</p>
+              <div class="price">₹6,299</div>
+              <button class="btn btn-add">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+        <!-- Item 5 -->
+        <div class="col-lg-4 col-sm-6">
+          <article class="card h-100">
+            <div class="img-wrapper">
+              <img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?q=80&w=600&auto=format&fit=crop" alt="Shoe">
+            </div>
+            <div class="card-body">
+              <h6 class="mb-1">Nike Air Max 270</h6>
+              <p class="text-muted mb-0">Women's Lifestyle</p>
+              <div class="price">₹12,499</div>
+              <button class="btn btn-add">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+        <!-- Item 6 -->
+        <div class="col-lg-4 col-sm-6">
+          <article class="card h-100">
+            <div class="img-wrapper">
+              <img src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?q=80&w=600&auto=format&fit=crop" alt="Shoe">
+            </div>
+            <div class="card-body">
+              <h6 class="mb-1">Nike Joyride</h6>
+              <p class="text-muted mb-0">Men's Running</p>
+              <div class="price">₹9,999</div>
+              <button class="btn btn-add">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+        <!-- Item 7 -->
+        <div class="col-lg-4 col-sm-6">
+          <article class="card h-100">
+            <div class="img-wrapper">
+              <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=600&auto=format&fit=crop" alt="Shoe">
+            </div>
+            <div class="card-body">
+              <h6 class="mb-1">Nike Dunk Low</h6>
+              <p class="text-muted mb-0">Men's Lifestyle</p>
+              <div class="price">₹8,499</div>
+              <button class="btn btn-add">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+
+</div>
+</main>
+
+<footer role="contentinfo">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 mb-4 mb-md-0">
+        <h4 style="font-weight: 900; letter-spacing: -1px; text-transform: uppercase; margin-bottom: 15px;">TOE TITAN</h4>
+        <p style="opacity: 0.6; font-size: 0.9rem; max-width: 300px;">The ultimate destination for premium footwear. Step into greatness with our exclusive collections.</p>
+      </div>
+      <div class="col-md-3 mb-4 mb-md-0">
+        <h6 class="text-uppercase fw-bold mb-3" style="font-size: 0.9rem;">Company</h6>
+        <div class="d-flex flex-column gap-2" style="font-size: 0.9rem;">
+          <a href="about.html" class="text-light text-decoration-none" style="opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Our Story</a>
+          <a href="contact.html" class="text-light text-decoration-none" style="opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Contact Us</a>
+          <a href="login.html" class="text-light text-decoration-none" style="opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Member Login</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h6 class="text-uppercase fw-bold mb-3" style="font-size: 0.9rem;">Shop All Gear</h6>
+        <div class="d-flex flex-column gap-2" style="font-size: 0.9rem;">
+          <a href="shop.html?cat=men" class="text-light text-decoration-none" style="opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Men's Core Collection</a>
+          <a href="shop.html?cat=women" class="text-light text-decoration-none" style="opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Women's Core Collection</a>
+          <a href="cart.html" class="text-light text-decoration-none" style="opacity: 0.7; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">Your Cart</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5 pt-4 text-center" style="border-top: 1px solid rgba(255,255,255,0.1);">
+      <p style="opacity: 0.5; font-size: 0.8rem;">© 2025 Toe Titan. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>

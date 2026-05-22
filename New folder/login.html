@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Toe Titan | Login</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white">
+<div id="preloader"><div class="spinner"></div></div>
+
+<main role="main" class="row g-0 vh-100">
+  <div class="col-md-6 d-none d-md-block position-relative">
+    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/402692/01/mod01/fnd/IND/fmt/png/Palermo-Leather-Sneakers" class="w-100 h-100 object-fit-cover position-relative" alt="Puma Palermo Sneaker" style="z-index: 0; background-color: #fafafa;">
+  </div>
+  <div class="col-md-6 d-flex align-items-center justify-content-center position-relative">
+    <div class="position-absolute top-0 end-0 p-4 d-flex align-items-center gap-4" style="z-index: 10;">
+      <button class="btn btn-link nav-link p-0 theme-toggle text-dark" id="theme-toggle" aria-label="Toggle Dark Mode" style="font-size: 1.2rem; cursor: pointer; text-decoration: none;">🌓</button>
+      <a href="index.html" class="text-dark text-decoration-none fw-bold" aria-label="Close Login">✕ CLOSE</a>
+    </div>
+    <div class="w-100 p-4" style="max-width: 340px;">
+      <h1 id="authTitle" class="mb-2 fw-bold text-uppercase" style="letter-spacing:-1px; font-size:2.2rem; line-height: 1.2;">YOUR ACCOUNT<br>FOR EVERYTHING.</h1>
+      <p id="authDesc" class="text-muted mb-3" style="font-size: 0.95rem; text-transform:none; font-family:'Inter',sans-serif; letter-spacing:0;">Join the community. Get exclusive access to drops, tailored gear, and more.</p>
+      
+      <form onsubmit="handleAuth(event)">
+        <div id="nameField" class="mb-3 d-none">
+          <label for="name" class="form-label fw-bold text-uppercase small text-muted mb-1">First Name</label>
+          <input type="text" class="form-control form-control-clean fs-6" id="name" placeholder="John Doe">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label fw-bold text-uppercase small text-muted mb-1">Email address</label>
+          <input type="email" class="form-control form-control-clean fs-6" id="email" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="pwd" class="form-label fw-bold text-uppercase small text-muted mb-1">Password</label>
+          <input type="password" class="form-control form-control-clean fs-6" id="pwd" placeholder="••••••••">
+        </div>
+        <div class="d-flex justify-content-between mb-3 small fw-bold text-muted">
+          <div class="d-flex align-items-center"><input type="checkbox" id="keep" class="me-2 text-dark"> <label for="keep" style="cursor:pointer;" class="text-dark">Keep me logged in</label></div>
+          <a href="#" class="text-dark text-decoration-none border-bottom border-dark">Forgot password?</a>
+        </div>
+        <p class="text-muted small mb-3" style="line-height: 1.3; text-transform:none; font-family:'Inter',sans-serif; letter-spacing:0;">By continuing, you agree to Toe Titan's Privacy Policy and Terms of Use.</p>
+        <button type="submit" id="mainAuthBtn" class="btn btn-dark w-100 py-2 rounded-0 fs-6 mb-2">SIGN IN</button>
+        <button type="button" id="secAuthBtn" onclick="toggleAuth()" class="btn border border-dark text-dark bg-transparent w-100 py-2 rounded-0 fs-6 fw-bold">JOIN US</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>
